@@ -3,41 +3,41 @@
 // Used in conjunction with global variables to enable certain theme features.
 
 // Vendor
-@import "vendor/_rfs";
+@import "vendor/_rfs.scss";
 
 // Deprecate
-@import "mixins/_deprecate";
+@import "mixins/_deprecate.scss";
 
 // Helpers
-@import "mixins/_breakpoints";
-@import "mixins/_color-scheme";
-@import "mixins/_image";
-@import "mixins/_resize";
-@import "mixins/_visually-hidden";
-@import "mixins/_reset-text";
-@import "mixins/_text-truncate";
+@import "mixins/_breakpoints.scss";
+@import "mixins/_color-scheme.scss";
+@import "mixins/_image.scss";
+@import "mixins/_resize.scss";
+@import "mixins/_visually-hidden.scss";
+@import "mixins/_reset-text.scss";
+@import "mixins/_text-truncate.scss";
 
 // Utilities
-@import "mixins/_utilities";
+@import "mixins/_utilities.scss";
 
 // Components
-@import "mixins/_alert";
-@import "mixins/_backdrop";
-@import "mixins/_buttons";
-@import "mixins/_caret";
-@import "mixins/_pagination";
-@import "mixins/_lists";
-@import "mixins/_list-group";
-@import "mixins/_forms";
-@import "mixins/_table-variants";
+@import "mixins/_alert.scss";
+@import "mixins/_backdrop.scss";
+@import "mixins/_buttons.scss";
+@import "mixins/_caret.scss";
+@import "mixins/_pagination.scss";
+@import "mixins/_lists.scss";
+@import "mixins/_list-group.scss";
+@import "mixins/_forms.scss";
+@import "mixins/_table-variants.scss";
 
 // Skins
-@import "mixins/_border-radius";
-@import "mixins/_box-shadow";
-@import "mixins/_gradients";
-@import "mixins/_transition";
+@import "mixins/_border-radius.scss";
+@import "mixins/_box-shadow.scss";
+@import "mixins/_gradients.scss";
+@import "mixins/_transition.scss";
 
 // Layout
-@import "mixins/_clearfix";
-@import "mixins/_container";
-@import "mixins/_grid";
+@import "mixins/_clearfix.scss";
+@import "mixins/_container.scss";
+@import "mixins/_grid.scss";
