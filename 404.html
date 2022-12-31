@@ -1,0 +1,17 @@
+---
+layout: bare
+title: "404: Page Not Found"
+---
+{% include navbar.html %}
+
+<div class="vh-100 d-flex align-items-center swaground p-5 text-dark">
+  <div class="p-2 p-sm-4 p-md-5">
+      <p class="badge rounded-3 bg-inv-red text-bg-inv-red mb-1">Error 404</p>
+      <h1 class="display-1">
+        Page Not Found!
+      </h1>
+      <p class="fs-6 lh-sm mb-4">We can't find the page you're looking for. Please check that the URL you entered is valid</p>
+      <a href="/" class="btn btn-inv-blue mb-1"><i class="bi bi-house"></i> Return Home</a>
+      <a onclick="history.back()" class="btn btn-inv-yellow mb-1"><i class="bi bi-arrow-left"></i> Previous Page</a>
+  </div>
+</div>

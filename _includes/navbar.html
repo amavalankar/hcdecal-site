@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light navigation fixed-top align-items-center">
+    <div class="container-fluid py-1 py-md-2 align-items-center">
+        <img src="{{ site.baseurl }}/assets/hcd_logo.svg" alt="Logo" height="30" class="me-3 d-inline-block">
+        <a class="navbar-brand fw-semibold p-0 swag-text-title" href="/">
+            HCD DeCal
+        </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main">
+        <i class="bi bi-list h1 text-dark"></i>
+      </button>
+
+      <div class="navbar-collapse collapse mt-2" id="navbar-main">
+        <hr class="d-md-none border-0">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            {% for item in site.data.navigation %}
+                <li class="nav-item nav-pills me-2">
+                    {% if page.url == item.url %}
+                        <a class="nav-link active bg-inv-blue text-light px-3 fw-semibold shadow-sm">
+                    {% else %}
+                        <a class="nav-link text-inv-blue px-3 fw-semibold" href="{{ item.url }}">
+                    {% endif %}
+                    {{ item.title }} 
+                    {% if item.icon %}
+                    <i class="bi bi-{{ item.icon }}"></i>
+                    {% endif %}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+      </div>
+    </div>
+</nav>

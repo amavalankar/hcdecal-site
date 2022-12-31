@@ -1,0 +1,17 @@
+- section-title: Course Links
+  links:
+    - name: Home
+      url: https://google.com
+    - name: Schedule
+      url: https://google.com
+    - name: Syllabus
+      url: https://google.com
+    - name: Attendance
+      url: https://google.com
+    - name: bCourses
+      url: https://google.com
+
+- section-title: Quick Links
+  links:
+    - name: 
+      url: https://google.com

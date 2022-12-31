@@ -1,0 +1,22 @@
+<section class="swaground pb-4 offset-top">
+    <div class="text-wrap container-narrow pt-4">
+        <div class="mb-3 text-light">
+            {% for tag in page.tags %}
+                <span class="badge bg-primary rounded-3">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        
+        <h1 class="display-1 fw-semibold text-black text-wrap lh-1 pb-3">{{ page.hero-text }}</h1>
+
+        <div class="mb-2">
+            {% for button in page.buttons %}
+                <a class="btn btn-{{ button.color }} mb-1" href="{{ button.url }}">
+                    {% if button.icon %}
+                        <i class="bi bi-{{ button.icon }}"></i> 
+                    {% endif %}
+                    {{ button.text }}
+                </a>
+            {% endfor %}
+        </div>                
+    </div>
+</section>

@@ -1,0 +1,11 @@
+- title: Home
+  url: /
+- title: Schedule
+  url: /schedule
+- title: Syllabus
+  url: /syllabus
+- title: Attendance
+  url: /construction
+- title: bCourses
+  url: /construction
+  icon: arrow-up-right-square

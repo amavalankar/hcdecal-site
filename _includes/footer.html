@@ -1,0 +1,43 @@
+<section class="swaground-dark text-light">
+  <footer class="container-narrow pt-5 pb-4">
+      <div class="row">
+        {% for section in site.data.footer %}
+        <div class="col-6 col-md-2 mb-3">
+            <h5>{{ section.section-title }}</h5>
+            <ul class="nav flex-column">
+                {% for link in section.links %}
+                <li class="nav-item mb-2"><a href="{{ link.url }}" class="nav-link p-0 text-light">{{ link.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+
+        <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+                <img
+                src="{{ site.baseurl }}assets/bi_logo_min.svg"
+                alt="triangle with all three sides equal"
+                width="40" /
+                class="mx-0 mb-2">
+                <p>{{ site.about-bi }}</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <a class="btn btn-primary" href="{{ site.bi-url }}" target="_blank" type="button">Learn More <i class="bi-arrow-up-right-square"></i></a>
+                </div>
+            </form>
+        </div>
+      </div>
+  
+      <div class="d-flex flex-column flex-sm-row justify-content-between pt-4 mt-4 border-top">
+          <h6>Made with 🧡 by Berkeley Innovation.</h6>
+          <ul class="list-unstyled d-flex pt-2 pt-sm-0">
+            {% for social in site.data.socials %}
+              <li class="ms-3">
+                <a class="link-light" href="{{ social.url }}" target="_blank">
+                    <i class="bi bi-{{ social.icon }}"></i>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+      </div>
+  </footer>
+</section>

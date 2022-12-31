@@ -1,0 +1,27 @@
+title: Human-Centered Design DeCal
+email: your-email@example.com
+description: Description TBD
+baseurl: ""
+tagline: HCD DeCal
+
+about-bi: We are UC Berkeley’s first student-run design organization since 2003.
+bi-url: https://berkeleyinnovation.org
+
+plugins:
+  - jekyll-feed
+  - jekyll-toc
+
+sass:
+  sass_dir:          _scss
+  style:            :compressed
+
+kramdown:
+  parse_block_html: true
+
+toc:
+  min_level: 2
+  max_level: 3
+
+csv:
+  weeks-test:
+    source: https://docs.google.com/spreadsheets/d/e/2PACX-1vQUTscVJzyus9LeItw5R8laRNaA5QNVrPNjIOPx9-BYIz8zs9nBwAThncFicz2ud02n3ww76nzfzYfS/pub?output=csv

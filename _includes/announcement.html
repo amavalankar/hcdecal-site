@@ -1,0 +1,9 @@
+{% for announcement in site.data.announcement limit: 1 %}
+<p class="badge rounded-3 bg-inv-yellow text-bg-inv-yellow mb-1">
+        Updated {{ announcement.date }}
+</p>
+<h2>Announcements</h2>
+{{ announcement.text | markdownify }}
+<a class="btn btn-primary btn-sm" href="#current-week">Jump to Current Week <i class="bi-arrow-down"></i></a>
+<hr class="mb-4">
+{% endfor %}

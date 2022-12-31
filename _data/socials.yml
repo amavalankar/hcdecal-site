@@ -1,0 +1,9 @@
+- name: Instagram
+  url: https://google.com
+  icon: instagram
+- name: Facebook
+  url: https://google.com
+  icon: facebook
+- name: Email
+  url: https://google.com
+  icon: envelope
