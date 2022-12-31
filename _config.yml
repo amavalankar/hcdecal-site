@@ -13,7 +13,6 @@ plugins:
 
 sass:
   sass_dir: assets/scss
-  style: compressed
 
 kramdown:
   parse_block_html: true
