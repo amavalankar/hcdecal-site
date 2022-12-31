@@ -3,7 +3,7 @@
 ---
 
 /* import the necessary Bootstrap files */
-@import "_functions.scss";
+@import "../scss/_functions.scss";
 
 $inv-red:               #C90000;
 $inv-yellow:            #FFBB0E;
@@ -26,7 +26,7 @@ $border-radius:             0.5rem;
 $border-radius-sm:          0.5rem;
 $display-font-weight:       $font-weight-semibold;
 
-@import "_variables.scss";
+@import "../scss/_variables.scss";
 
 $badge-font-weight:         $font-weight-semibold;
 $btn-font-weight:           $font-weight-semibold;
@@ -35,7 +35,7 @@ $theme-colors:              map-merge($theme-colors, $custom-colors);
 $nav-pills-link-active-color:       $primary;
 $nav-pills-link-active-bg:          $white;
 
-@import "bootstrap.scss";
+@import "../scss/bootstrap.scss";
  
 .navigation {
     padding: 10px 75px;
