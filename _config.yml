@@ -8,7 +8,6 @@ about-bi: We are UC Berkeley’s first student-run design organization since 200
 bi-url: https://berkeleyinnovation.org
 
 plugins:
-  - jekyll-feed
   - jekyll-toc
 
 sass:
@@ -20,3 +19,5 @@ kramdown:
 toc:
   min_level: 2
   max_level: 3
+
+permalink: pretty

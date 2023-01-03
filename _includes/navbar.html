@@ -14,7 +14,7 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             {% for item in site.data.navigation %}
                 <li class="nav-item nav-pills me-2">
-                    {% if page.url == item.url %}
+                    {% if page.url contains item.url and ((item.url != "/") or (page.url == "/")) %}
                         <a class="nav-link active bg-inv-blue text-light px-3 fw-semibold shadow-sm">
                     {% else %}
                         <a class="nav-link text-inv-blue px-3 fw-semibold" href="{{ item.url }}">
