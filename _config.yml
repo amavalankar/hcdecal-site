@@ -12,7 +12,7 @@ plugins:
   - jekyll-toc
 
 sass:
-  sass_dir:          _scss
+  sass_dir: _scss
 
 kramdown:
   parse_block_html: true
