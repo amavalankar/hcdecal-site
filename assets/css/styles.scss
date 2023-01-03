@@ -25,8 +25,8 @@ $border-radius:             0.5rem;
 $border-radius-sm:          0.5rem;
 $display-font-weight:       $font-weight-semibold;
 
-@import "../../_scss/functions";
-@import "../../_scss/variables";
+@import "functions";
+@import "variables";
 
 $badge-font-weight:         $font-weight-semibold;
 $btn-font-weight:           $font-weight-semibold;
@@ -36,7 +36,7 @@ $nav-pills-link-active-bg:          $white;
 
 $theme-colors:              map-merge($theme-colors, $custom-colors);
 
-@import "../../_scss/bootstrap";
+@import "bootstrap";
  
 .navigation {
     padding: 10px 75px;
