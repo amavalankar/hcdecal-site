@@ -1,22 +1,23 @@
-<section class="swaground pb-4 offset-top">
-    <div class="text-wrap container-narrow pt-4">
-        <div class="mb-3 text-light">
+<section class="pb-4 offset-top">
+    <div class="text-wrap container-narrow py-3">
+        <div class="mb-1 text-light">
             {% for tag in page.tags %}
-                <span class="badge bg-primary rounded-3">{{ tag }}</span>
+                <span class="badge bg-dark rounded-3">{{ tag }}</span>
             {% endfor %}
         </div>
         
-        <h1 class="display-1 fw-semibold text-wrap lh-1 pb-3">{{ page.hero-text }}</h1>
+        <h1 class="display-1 fw-semibold text-wrap swag-text lh-1 py-3">{{ page.hero-text }}</h1>
 
         <div class="mb-2">
             {% for button in page.buttons %}
-                <a class="btn btn-{{ button.color }} mb-1" href="{{ button.url }}">
+                <!-- <a class="btn btn-{{ button.color }} mb-1" href="{{ button.url }}"> -->
+                <a class="btn btn-dark mb-1" href="{{ button.url }}">
                     {% if button.icon %}
                         <i class="bi bi-{{ button.icon }}"></i> 
                     {% endif %}
                     {{ button.text }}
                 </a>
             {% endfor %}
-        </div>                
+        </div>
     </div>
 </section>

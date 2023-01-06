@@ -1,31 +1,35 @@
-{% for week in site.data.weeks %}
-<div {% if week.current %}id="current-week"{% endif %} class="card border {% if week.current %}border-inv-red{% endif %} shadow-sm rounded-4 mb-3">
-    <div class="card-body p-4">
-        <div class="mb-1">
-            <span class="badge rounded-3 border border-2 border-primary text-primary mb-2">Week #{{ week.week-num }}</span>
-            {% if week.current %}
-                <span class="badge rounded-3 border border-2 border-inv-yellow bg-inv-yellow text-bg-inv-yellow mb-2">Current Week</span>
+<section class="container-narrow mb-5">
+    {% for week in site.data.weeks %}
+    <div {% if week.current %}id="current-week"{% endif %} class="border {% if week.current %}border-inv-red{% endif %} rounded-4 mb-4">
+        <div class="p-4">
+            <div>
+                <span class="badge rounded-3 border border-2 border-dark text-dark">Week #{{ week.week-num }}</span>
+                {% if week.current %}
+                    <span class="badge rounded-3 border border-2 border-inv-yellow bg-inv-yellow text-bg-inv-yellow">Current Week</span>
+                {% endif %}
+            </div>
+            <h6 class="card-subtitle fw-semibold text-muted mt-2 mb-1">{{ week.date }}</h6>
+            <h3 class="fw-semibold mt-0 mb-1 {% if week.current %}swag-text{% endif %}">{{ week.title }}</h3>
+            <a href="{{ week.recording }}" class="btn btn-link {% if week.recording == nil %}disabled{% endif %} p-0">Recording</a>
+            <a href="{ week.slides }}" class="btn btn-link {% if week.slides == nil %}disabled{% endif %} p-0">Slides</a>
+
+            {% if week.hw != nil or week.proj != nil or week.other != nil %}
+            <div class="mt-3">
+            {% if week.hw != nil %}
+                <a class="btn btn-sm btn-inv-blue mb-1 {% if week.hw-link == nil %}disabled{% endif %}" href="{{ week.hw-link }}"><i class="bi bi-journal-bookmark"></i> {{ week.hw }}</a>
             {% endif %}
+            
+            {% if week.proj != nil %}
+                <a class="btn btn-sm btn-inv-blue mb-1 {% if week.proj-link == nil %}disabled{% endif %}" href="{{ week.proj-link }}"><i class="bi bi-gear"></i> {{ week.proj }}</a>
+            {% endif %}
+
+            {% if week.other != nil %}
+                <a class="btn btn-sm btn-inv-blue mb-1 {% if week.other-link == nil %}disabled{% endif %}" href="{{ week.other-link }}"><i class="bi bi-bookmarks"></i> {{ week.other }}</a>
+            {% endif %}  
+            </div>
+            {% endif %}
+
         </div>
-        <h6 class="card-subtitle fw-semibold text-muted mb-1 ">{{ week.date }}</h6>
-        <h4 class="fw-semibold mb-1">{{ week.title }}</h4>
-        <a href="{{ week.recording }}" class="btn btn-link {% if week.recording == nil %}disabled{% endif %} p-0">Recording</a>
-        <a href="{ week.slides }}" class="btn btn-link {% if week.slides == nil %}disabled{% endif %} p-0">Slides</a>
-        {% if week.hw != nil or week.proj != nil or week.other != nil %}
-            <hr class="border-2 rounded">
-        {% endif %}
-
-        {% if week.hw != nil %}
-            <a class="btn btn-sm btn-inv-blue mb-1 {% if week.hw-link == nil %}disabled{% endif %}" href="{{ week.hw-link }}"><i class="bi bi-journal-bookmark"></i> {{ week.hw }}</a>
-        {% endif %}
-        
-        {% if week.proj != nil %}
-            <a class="btn btn-sm btn-inv-blue mb-1 {% if week.proj-link == nil %}disabled{% endif %}" href="{{ week.proj-link }}"><i class="bi bi-gear"></i> {{ week.proj }}</a>
-        {% endif %}
-
-        {% if week.other != nil %}
-            <a class="btn btn-sm btn-inv-blue mb-1 {% if week.other-link == nil %}disabled{% endif %}" href="{{ week.other-link }}"><i class="bi bi-bookmarks"></i> {{ week.other }}</a>
-        {% endif %}
     </div>
-</div>
-{% endfor %}
+    {% endfor %}
+</section>

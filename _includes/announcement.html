@@ -1,4 +1,4 @@
-{% for announcement in site.data.announcement limit: 1 %}
+<!-- {% for announcement in site.data.announcement limit: 1 %}
 <p class="badge rounded-3 bg-inv-yellow text-bg-inv-yellow mb-1">
         Updated {{ announcement.date }}
 </p>
@@ -6,4 +6,17 @@
 {{ announcement.text | markdownify }}
 <a class="btn btn-primary btn-sm" href="#current-week">Jump to Current Week <i class="bi-arrow-down"></i></a>
 <hr class="mb-4">
-{% endfor %}
+{% endfor %} -->
+
+<section class="bg-black py-4 mt-3 mb-5">
+        {% for announcement in site.data.announcement limit: 1 %}
+        <div class="container-narrow text-light my-4">
+                <p class="badge rounded-3 bg-inv-yellow text-bg-inv-yellow mb-0">
+                        Updated {{ announcement.date }}
+                </p>
+                <h1 class="my-2">Announcements</h1>
+                {{ announcement.text | markdownify }}
+                <a class="btn btn-primary btn-sm" href="#current-week">Jump to Current Week <i class="bi-arrow-down"></i></a>
+        </div>
+        {% endfor %}
+</section>
