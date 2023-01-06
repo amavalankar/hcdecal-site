@@ -115,7 +115,11 @@ $theme-colors:              map-merge($theme-colors, $custom-colors);
     padding: 10px 50px;
     transition: 0.2s ease-in-out;
 
-    background-color: rgba(255, 255, 255, 0.7);
+    &.navigation-white {
+        background-color: rgba(255, 255, 255);
+    }
+
+    background-color: rgba(255, 255, 255, 0.75);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
 
@@ -135,6 +139,8 @@ $theme-colors:              map-merge($theme-colors, $custom-colors);
         .swag-text-nav {
             @extend .swag-text;
         }
+        
+        @extend .shadow-sm;
     }
     @include media-breakpoint-down(md) {
         padding: 25px;

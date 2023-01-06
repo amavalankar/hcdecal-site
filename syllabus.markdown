@@ -8,9 +8,6 @@ tags:
     - Spring 2023
     - DES INV 98
     - 2 Units • P/NP
-buttons:
-    - {color: inv-yellow, text: Apply Now, icon: inboxes, url: /}
-    - {color: inv-blue, text: Return Home, icon: house, url: /}
 toc: true
 ---
 
