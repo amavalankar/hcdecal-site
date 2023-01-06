@@ -14,11 +14,13 @@ $inv-yellow:            #FFBD12;
 $inv-blue:              #3E2EFF;
 $inv-light:             #FFE7DF;
 
+$swagient:              linear-gradient(135deg, #fec417, #ff1548, #4845ff);
+
 $custom-colors: (
     "inv-red":          $inv-red,
     "inv-yellow":       $inv-yellow,
     "inv-blue":         $inv-blue,
-    "blight":           $inv-light
+    "blight":           $inv-light,
 );
 
 $primary:                   $inv-red;
@@ -91,15 +93,21 @@ $theme-colors:              map-merge($theme-colors, $custom-colors);
         background-size: 100% auto;
     }
 
-    background: linear-gradient(270.19deg, #2E29FF -7.48%, #FF3232 71.52%, #FF7A00 92.59%);
-    background-size: 200% auto;
+    // background: linear-gradient(270.19deg, #2E29FF -7.48%, #FF3232 71.52%, #FF7A00 92.59%);
+    background: $swagient;
+    background-size: 150% auto;
 
     animation: shift-text 10s ease-in-out infinite;
     @keyframes shift-text { 
-        0%{background-position:75% 10%}
-        50%{background-position:25% 100%}
-        100%{background-position:75% 10%}
+        0%{background-position:50% 50%}
+        30%{background-position:0% 100%}
+        60%{background-position:100% 0%}
+        100%{background-position:50% 50%}
     }
+}
+
+.swag-border {
+    border-color: $swagient;
 }
 
 .swag-text {
@@ -132,9 +140,6 @@ $theme-colors:              map-merge($theme-colors, $custom-colors);
         @include media-breakpoint-down(md) {
             padding: 5px 20px;
         }
-        // background-color: rgba(255, 255, 255, 0.7);
-        // -webkit-backdrop-filter: blur(12px);
-        // backdrop-filter: blur(12px);
 
         .swag-text-nav {
             @extend .swag-text;

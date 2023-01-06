@@ -5,7 +5,10 @@ baseurl: ""
 tagline: HCD DeCal
 
 about-bi: We are UC Berkeley’s first student-run design organization since 2003.
+about-bi-long: We are UC Berkeley’s first student-run design organization since 2003. As a human-centered design consultancy, we work with clients on projects ranging from physical to digital products, brands, and experiences.
 bi-url: https://berkeleyinnovation.org
+app-url: /construction
+app-deadline: January 12, 2023
 
 plugins:
   - jekyll-toc

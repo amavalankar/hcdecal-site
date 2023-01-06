@@ -38,81 +38,28 @@ buttons:
         <hr class="border border-light border-1 opacity-100">
 
         <div class="my-5">
-            <h3 class="lh-2">Students learn about the human-centered design process and theory, and engage in hands-on activities during class and in homework assignments. Throughout the semester, students will use industry standard tools to solve a problem they care about in their midterm and final project. <span class="text-inv-yellow">Apps due January 20th.</span></h3>    
+            <h3 class="lh-2">In this course facilitated by Berkeley Innovation, students learn about the human-centered design process and theory, and engage in hands-on activities during class and in homework assignments. Throughout the semester, students will use industry standard tools to solve a problem they care about in their midterm and final project. <span class="text-inv-yellow">Apps due January 20th.</span></h3>    
         </div>
 
-        <a class="btn btn-lg btn-light me-2 mb-2">Apply Now</a>
-        <a class="btn btn-lg btn-light me-2 mb-2">About Berkeley Innovation</a>
+        <a class="btn btn-lg btn-light me-2 mb-2" href="{{ site.app-url }}">Apply Now</a>
     </div>
 </section>
-
-<!-- <section class="py-5">
-    <div class="container-narrow">
-        <div class="row my-5">
-            <div class="col-12">
-                <div class="bg-inv-blue text-light rounded-4 p-5">
-                    <h1 class="mb-4"><i class="bi bi-megaphone-fill"></i> About the Course</h1>
-
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                              Accordion Item #1
-                            </button>
-                          </h2>
-                          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                              Accordion Item #2
-                            </button>
-                          </h2>
-                          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                              Accordion Item #3
-                            </button>
-                          </h2>
-                          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
 
 <section class="py-5 bg-light">
     <div class="container-narrow my-5">
         <h1 class="text-inv-blue"><i class="bi bi-megaphone-fill"></i> About the Course</h1>
 
-        <div class="accordion accordion-flush accordion-home my-4 px-4" id="accordionDefault">
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Accordion Item #1</button>
-              </h3>
-              <div class="accordion-collapse collapse" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionDefault">
-                <div class="accordion-body fs-sm pe-5">This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.</div>
+        <div class="accordion accordion-flush accordion-home my-4 px-4" id="faqs">
+            {% for faq in site.data.home-faqs %}
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="head-faq{{ faq.num }}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq{{ faq.num }}" aria-expanded="false" aria-controls="collapseOne">{{ faq.label }}</button>
+                </h3>
+                <div class="accordion-collapse collapse" id="faq{{ faq.num }}" aria-labelledby="head-faq{{ faq.num }}" data-bs-parent="#faqs">
+                  <div class="accordion-body fs-sm pe-5 mb-0">{{ faq.answer | markdownify }}</div>
+                </div>
               </div>
-            </div>
-          
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Accordion Item #2</button>
-              </h3>
-              <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionDefault">
-                <div class="accordion-body fs-sm">This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.</div>
-              </div>
-            </div>
+            {% endfor %}
         </div>
 
         <h1 class="text-primary pt-5 pb-4"><i class="bi bi-people-fill"></i> Course Staff</h1>
@@ -130,6 +77,6 @@ buttons:
 <section class="py-2 py-sm-4 py-md-5 swag-gradient">
     <div class="container-narrow bg-light text-dark rounded-4 p-5 my-4">
         <h1 class="mb-4"><i class="bi bi-lightbulb-fill"></i> About Berkeley Innovation</h1>
-        <h4 class="fw-normal">We are UC Berkeley’s first student-run design organization since 2003. As a human-centered design consultancy, we work with clients on projects ranging from physical to digital products, brands, and experiences.</h4>
+        <h4 class="fw-normal">{{ site.about-bi-long }}</h4>
     </div>
 </section>

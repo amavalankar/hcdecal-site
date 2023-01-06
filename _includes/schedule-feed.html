@@ -1,6 +1,6 @@
 <section class="container-narrow mb-5">
     {% for week in site.data.weeks %}
-    <div {% if week.current %}id="current-week"{% endif %} class="border {% if week.current %}border-inv-red{% endif %} rounded-4 mb-4">
+    <div {% if week.current %}id="current-week"{% endif %} class="border {% if week.current %}border-inv-yellow{% endif %} rounded-4 mb-4">
         <div class="p-4">
             <div>
                 <span class="badge rounded-3 border border-2 border-dark text-dark">Week #{{ week.week-num }}</span>
