@@ -28,6 +28,47 @@ $display-font-weight:       $font-weight-semibold;
 @import "functions.scss";
 @import "variables.scss";
 
+$accordion-icon-active-color:   $inv-blue;
+$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='#{$accordion-icon-color}' class='bi bi-plus-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z'/></svg>");
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='#{$accordion-icon-active-color}' class='bi bi-plus-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z'/></svg>");
+$accordion-icon-transform:      rotate(45deg);
+$accordion-icon-transition:     transform .4s ease-in-out;
+$accordion-bg:                  none;
+
+.accordion-home .accordion-button {
+    @extend h1;
+    @extend .fs-3;
+    @extend .shadow-none;
+    @extend .py-4;
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .m-0;
+
+    --#{$prefix}accordion-btn-bg: none;
+    --#{$prefix}accordion-active-color: #{$inv-blue};
+    --#{$prefix}accordion-active-bg: none;
+    --#{$prefix}accordion-btn-active-icon: #{escape-svg($accordion-button-active-icon)};
+}
+
+.accordion-home .accordion-body {
+    @extend .pt-0;
+    @extend .pb-4;
+}
+// .accordion-clean {
+//     @extend .accordion-flush;
+//   }
+
+// .accordion-item {
+//     margin-bottom: 1rem;
+//     background: none !important;
+// }
+
+// .accordion-button {
+//     background: none !important;
+//     @extend h1;
+//     border-color: $black !importants;
+// }
+
 $badge-font-weight:         $font-weight-semibold;
 $btn-font-weight:           $font-weight-semibold;
 
@@ -39,16 +80,42 @@ $theme-colors:              map-merge($theme-colors, $custom-colors);
 @import "mixins";
 @import "bootstrap";
  
+.swag-gradient {
+    &.swag-still {
+        animation: none;
+        background-size: 100% auto;
+    }
+
+    background: linear-gradient(270.19deg, #2E29FF -7.48%, #FF3232 71.52%, #FF7A00 92.59%);
+    background-size: 200% auto;
+
+    animation: shift-text 10s ease-in-out infinite;
+    @keyframes shift-text { 
+        0%{background-position:75% 10%}
+        50%{background-position:25% 100%}
+        100%{background-position:75% 10%}
+    }
+}
+
+.swag-text {
+    @extend .swag-gradient;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
 .navigation {
-    padding: 10px 75px;
+    padding: 10px 50px;
     transition: 0.2s ease-in-out;
 
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     background-color: rgba(255,255,255,0);
 
-    .swag-text {
-        color: $black;
+    .swag-text-nav {
+        color: $black !important;
     }
 
     &.nav-bg {
@@ -59,14 +126,9 @@ $theme-colors:              map-merge($theme-colors, $custom-colors);
         background-color: rgba(255, 255, 255, 0.7);
         -webkit-backdrop-filter: blur(12px);
         backdrop-filter: blur(12px);
-        //border-bottom: 2px solid $black;
 
-        .swag-text-title{
-            background: linear-gradient(270.19deg, #2E29FF -7.48%, #FF3232 71.52%, #FF7A00 92.59%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
+        .swag-text-nav {
+            @extend .swag-text;
         }
     }
     @include media-breakpoint-down(md) {
@@ -78,6 +140,17 @@ $theme-colors:              map-merge($theme-colors, $custom-colors);
     padding-top: 90px !important;
 }
 
+.hero-offset-top {
+    @include media-breakpoint-down(sm) {
+        margin-top: 50px !important;
+        margin-bottom: 50px !important;
+    }
+}
+
+.sp-vh-100 {
+    min-height: 100vh;
+}
+
 @mixin make-container($padding-x: $container-padding-x) {
     width: 75%;
     padding-right: $padding-x;
@@ -86,7 +159,7 @@ $theme-colors:              map-merge($theme-colors, $custom-colors);
     margin-left: auto;
 
     @include media-breakpoint-down(sm) {
-        width: 85%;
+        width: 95%;
     }
 }
   
@@ -94,28 +167,12 @@ $theme-colors:              map-merge($theme-colors, $custom-colors);
     @include make-container();
 }
 
-.masthead-followup-icon {
-    padding: 1rem;
-    background-blend-mode: multiple;
-    border-radius: 1rem;
-    mix-blend-mode: darken
-}
-
-.swag-text {
-    background: linear-gradient(270.19deg, #2E29FF -7.48%, #FF3232 71.52%, #FF7A00 92.59%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-}
-
 .align-middle {
     vertical-align: middle;
 }
 
 .swaground {
-    /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), linear-gradient(263.08deg, rgba(245, 146, 146, 0.74) 2.9%, rgba(255, 255, 255, 0) 55.4%), linear-gradient(109.08deg, rgba(154, 231, 255, 0.46) 30.3%, rgba(255, 255, 255, 0) 60.07%), linear-gradient(220.36deg, rgba(255, 245, 158, 0.79) 31.74%, rgba(255, 247, 180, 0.74) 46.92%, rgba(255, 255, 255, 0) 70.52%), linear-gradient(101.56deg, #A4A7FF 47.17%, rgba(255, 255, 255, 0) 62.37%), linear-gradient(180deg, #FFE1D3 0%, rgba(255, 255, 255, 0) 95.12%); */
-    background: linear-gradient(337.88deg, rgba(255, 255, 255, 0) 18.58%, rgba(255, 255, 255, 0.6) 109.4%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), linear-gradient(263.08deg, rgba(245, 146, 146, 0.74) 2.9%, rgba(255, 255, 255, 0) 55.4%), linear-gradient(109.08deg, rgba(154, 231, 255, 0.46) 30.3%, rgba(255, 255, 255, 0) 60.07%), linear-gradient(220.36deg, rgba(255, 245, 158, 0.79) 31.74%, rgba(255, 247, 180, 0.74) 46.92%, rgba(255, 255, 255, 0) 70.52%), linear-gradient(134.85deg, #A4A7FF 54.93%, rgba(255, 255, 255, 0) 75.2%), linear-gradient(180deg, #FFE1D3 0%, rgba(255, 255, 255, 0) 95.12%);
+    background: linear-gradient(337.88deg, rgba(255, 255, 255, 0) 18.58%, rgba(255, 255, 255, 0.6) 109.4%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), linear-gradient(263.08deg, rgba(245, 146, 146, 0.74) 2.9%, rgba(255, 255, 255, 0) 55.4%), linear-gradient(109.08deg, rgba(154, 231, 255, 0.46) 30.3%, rgba(255, 255, 255, 0) 60.07%), linear-gradient(220.36deg, rgba(255, 245, 158, 0.79) 31.74%, rgba(255, 247, 180, 0.74) 46.92%, rgba(255, 255, 255, 0) 70.52%), linear-gradient(134.85deg, #A4A7FF 54.93%, rgba(255, 255, 255, 0) 75.2%), linear-gradient(180deg, #FFE1D3 0%, rgba(255, 255, 255, 0) 95.12%), linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255, 255, 255));;
 }
 
 .swaground-dark {
@@ -166,19 +223,19 @@ div.toc-items ul {
 
 .page-content {
     h1, h2, h3, h4, h5, h6 {
-        margin-top: 0;
+        margin-top: 0.25rem;
         margin-bottom: .5rem;
         font-weight: 500;
         line-height: 1.2;
     }
 
     hr {
-        margin-top: 2em;
-        margin-bottom: 2em;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
     }
 
     .alert {
-        margin-bottom: 2em;
+        margin-bottom: 1.5em;
     }
 
     table {
@@ -195,5 +252,34 @@ div.toc-items ul {
 
 blockquote {
     @extend .bd-callout;
-    @extend .bd-callout-danger;
 }
+
+.vh-50 {
+    height: 50vh;
+}
+
+.vh-75 {
+    height: 75vh;
+}
+  
+.head-icon {
+    padding: 1rem;
+    color: rgba(var(--bg-rgb), 1);
+    background-color: rgba(var(--bg-rgb), .1);
+    background-blend-mode: multiple;
+    @include border-radius(1rem);
+    mix-blend-mode: darken;
+  
+    svg {
+      filter: drop-shadow(0 1px 1px var(--bs-body-bg));
+    }
+  }
+
+  ::selection {
+    background: $inv-blue; /* WebKit/Blink Browsers */
+    color: $white;
+  }
+  ::-moz-selection {
+    background: $inv-blue; /* WebKit/Blink Browsers */
+    color: $white;
+  }

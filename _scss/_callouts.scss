@@ -10,7 +10,8 @@
   margin-bottom: 1.25rem;
   color: var(--bd-callout-color, inherit);
   background-color: var(--bd-callout-bg, var(--bs-gray-100));
-  border-left: .25rem solid var(--bd-callout-border, var(--bs-gray-300));
+  border-left: .35rem solid var(--bd-callout-border, var(--bs-gray-300));
+  border-radius: 0.5rem;
 
   h4 {
     margin-bottom: .25rem;
