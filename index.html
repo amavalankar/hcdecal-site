@@ -50,13 +50,13 @@ buttons:
         <h1 class="text-inv-blue"><i class="bi bi-megaphone-fill"></i> About the Course</h1>
 
         <div class="accordion accordion-flush accordion-home my-4 px-3" id="faqs">
-            {% for faq in site.data.home-faqs %}
+            {% for faq in site.data.faqs %}
               <div class="accordion-item">
-                <h3 class="accordion-header" id="head-faq{{ faq.num }}">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq{{ faq.num }}" aria-expanded="false" aria-controls="collapseOne">{{ faq.label }}</button>
+                <h3 class="accordion-header" id="head-faq{{ faq.content | size }}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq{{ faq.content | size }}" aria-expanded="false" aria-controls="collapseOne">{{ faq.title }}</button>
                 </h3>
-                <div class="accordion-collapse collapse" id="faq{{ faq.num }}" aria-labelledby="head-faq{{ faq.num }}" data-bs-parent="#faqs">
-                  <div class="accordion-body fs-sm pe-5 mb-0">{{ faq.answer | markdownify }}</div>
+                <div class="accordion-collapse collapse" id="faq{{ faq.content | size }}" aria-labelledby="head-faq{{ faq.content | size }}" data-bs-parent="#faqs">
+                  <div class="accordion-body fs-sm pe-5 mb-0">{{ faq.content | markdownify }}</div>
                 </div>
               </div>
             {% endfor %}
@@ -65,11 +65,13 @@ buttons:
         <h1 class="text-primary pt-5 pb-4"><i class="bi bi-people-fill"></i> Course Staff</h1>
 
         <div class="row gx-5 gy-4">
+            {% for person in site.data.staff %}
             <div class="col-6 col-md-4 col-lg-3">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/2560px-Image_created_with_a_mobile_phone.png" class="ratio ratio-1x1 rounded-3 mt-2"></img>
-                <h4 class="card-title pt-2 mt-2 mb-0">Namey McNameName <small class="fw-normal">(pro/noun)</small></h4>
-                <h5 class="text-primary my-0">Instructor</h5>
+                <img src="{{ person.image }}" class="ratio ratio-1x1 rounded-3 mt-2"></img>
+                <h4 class="card-title pt-2 mt-2 mb-0">{{ person.title }} <small class="fw-normal">{{ person.pronouns }}</small></h4>
+                <h5 class="text-primary my-0">{{ person.role }}</h5>
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>

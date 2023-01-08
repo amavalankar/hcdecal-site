@@ -257,7 +257,9 @@ div.toc-items ul {
 
     table {
         @extend .table;
-        @extend .table-sm;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;    
+        display: block;
     }
 
     tbody {
@@ -300,3 +302,7 @@ blockquote {
     background: $inv-blue; /* WebKit/Blink Browsers */
     color: $white;
   }
+
+li p {
+    margin-bottom: 0.25rem !important;
+}

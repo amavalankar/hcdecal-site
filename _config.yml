@@ -16,6 +16,8 @@ plugins:
   - jekyll-notion
   - jekyll-toc
 
+permalink: pretty
+
 sass:
   sass_dir: _scss
 
@@ -25,13 +27,7 @@ kramdown:
 toc:
   min_level: 2
   max_level: 3
-
-notion:
-  fetch_on_watch: true
-  databases:
-    - id: 1b9c885292434a93839a8e590c51ba5d
-      data: assignments
-      
+    
 defaults:
   -
     scope:
@@ -56,5 +52,12 @@ notion:
   databases:
     - id: 1b9c885292434a93839a8e590c51ba5d
       collection: assignments
+    - id: 7bb8b112533649039a6ce4588a83cfa2
+      data: schedule
+      sorts: [{ "property": "Week Number", "direction": "ascending" }]
+    - id: 5cf9ab87b30e4851b92e422673fa6bd2
+      data: staff
+    - id: ed8263c9b84a41b489e8023febf85dd1
+      data: faqs
   pages:
     - id: 4469aa32c57247cd94e8994f04ef694f
