@@ -6,7 +6,13 @@
             {% endfor %}
         </div>
         
-        <h1 class="display-1 fw-semibold text-wrap swag-text lh-1 py-3">{{ page.hero-text }}</h1>
+        <h1 class="display-1 fw-semibold text-wrap swag-text lh-1 py-3">
+            {% if page.hero-text != nil %}
+                {{ page.hero-text }}
+            {% else %}
+                {{ page.title }}
+            {% endif %}
+        </h1>
 
         <div class="mb-2">
             {% for button in page.buttons %}

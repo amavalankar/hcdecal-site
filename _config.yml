@@ -13,6 +13,7 @@ app-url: /construction
 app-deadline: January 12, 2023
 
 plugins:
+  - jekyll-notion
   - jekyll-toc
 
 sass:
@@ -24,3 +25,36 @@ kramdown:
 toc:
   min_level: 2
   max_level: 3
+
+notion:
+  fetch_on_watch: true
+  databases:
+    - id: 1b9c885292434a93839a8e590c51ba5d
+      data: assignments
+      
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      toc: true
+  -
+    scope:
+      path: ""
+      type: assignments
+    values:
+      layout: docs
+      toc: true
+
+collections:
+  assignments:
+    output: true
+
+notion:
+  databases:
+    - id: 1b9c885292434a93839a8e590c51ba5d
+      collection: assignments
+  pages:
+    - id: 4469aa32c57247cd94e8994f04ef694f
