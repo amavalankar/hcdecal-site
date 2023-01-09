@@ -10,15 +10,18 @@
 
     <section class="container-narrow pb-4">
       <div class="row">
-        <div class="col-xs-12 col-md-3 order-md-2 mb-4">
-          <h5>On This Page</h5>
-          <hr class="my-2">
-          <div class="toc-items text-secondary">
-            {{ content | toc_only }}
+        <div class="col-xs-12 col-md-3 col-xl-2 order-md-2 mb-4">
+          <div class="sticky-section">
+            <h5>On This Page</h5>
+            <hr class="my-2">
+            <div class="toc-items text-secondary" id="toc-list">
+              {{ content | toc_only }}
+            </div>
           </div>
+          
         </div>
 
-        <div class="col-xs-12 col-md-9 order-md-1 page-content">
+        <div class="col-xs-12 col-md-9 col-xl-10 order-md-1 page-content" data-bs-spy="scroll" data-bs-target="#toc-list" tabindex="0">
           {{ content | inject_anchors }}
         </div>
       </div> 

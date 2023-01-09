@@ -12,10 +12,10 @@
         {% for announcement in site.data.announcement limit: 1 %}
         <div class="container-narrow text-light my-4">
                 <p class="badge rounded-3 bg-inv-yellow text-bg-inv-yellow mb-0">
-                        Updated {{ announcement.date }}
+                        Updated {{ announcement.date | date: "%B %e" }}
                 </p>
                 <h1 class="my-2">Announcements</h1>
-                {{ announcement.text | markdownify }}
+                {{ announcement.content }}
                 <a class="btn btn-primary btn-sm" href="#current-week">Jump to Current Week <i class="bi-arrow-down"></i></a>
         </div>
         {% endfor %}

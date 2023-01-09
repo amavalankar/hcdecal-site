@@ -306,3 +306,8 @@ blockquote {
 li p {
     margin-bottom: 0.25rem !important;
 }
+
+.sticky-section {
+    position: sticky;
+    top: 100px;
+}

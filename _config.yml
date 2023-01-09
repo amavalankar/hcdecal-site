@@ -57,7 +57,11 @@ notion:
       sorts: [{ "property": "Week Number", "direction": "ascending" }]
     - id: 5cf9ab87b30e4851b92e422673fa6bd2
       data: staff
+      sorts: [{ "property": "Role", "direction": "ascending" }]
     - id: ed8263c9b84a41b489e8023febf85dd1
       data: faqs
+    - id: 80d0187af1a74f27b13aec16e7674f23
+      data: announcement
+      sorts: [{ "property": "Date", "direction": "descending" }]
   pages:
-    - id: 4469aa32c57247cd94e8994f04ef694f
+    - id: 4469aa32c57247cd94e8994f04ef694f # Syllabus
