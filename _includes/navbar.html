@@ -17,7 +17,7 @@
                     {% capture lower-link %}{{ page.url | downcase}}{% endcapture %}
 
                     {% if (item.url != "/construction") and lower-link contains item.url and ((item.url != "/") or (lower-link == "/")) %}
-                        <a class="nav-link active bg-inv-blue text-light px-3 fw-semibold shadow-sm">
+                        <a class="nav-link active bg-inv-blue text-light px-3 fw-semibold shadow-sm" href="{{ item.url }}">
                     {% else %}
                         <a class="nav-link text-inv-blue px-3 fw-semibold" href="{{ item.url }}">
                     {% endif %}
