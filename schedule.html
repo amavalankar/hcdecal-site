@@ -7,10 +7,15 @@ tags:
     - DES INV 98
     - 2 Units • P/NP
 buttons:
-    - {color: inv-yellow, text: Apply Now, icon: clipboard, url: /syllabus}
+    - {color: inv-yellow, text: Apply By 1/19, icon: inboxes, url: /app}
     - {color: inv-blue, text: Syllabus, icon: clipboard, url: /syllabus}
+hide-schedule: true
 ---
 
 {% include announcement.html %}
 
+{% if page.hide-schedule%}
+{% include schedule-filler.html %}
+{% else %}
 {% include schedule-feed.html %}
+{% endif %}

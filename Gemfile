@@ -16,6 +16,7 @@ group :jekyll_plugins do
   gem 'jekyll-toc'
   gem 'jekyll-notion'
   gem 'notion_to_md'
+  gem 'jekyll-liquify'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

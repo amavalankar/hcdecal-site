@@ -5,12 +5,14 @@ baseurl: ""
 tagline: HCD DeCal
 
 site-description: "Berkeley Innovation's Human-Centered Design DeCal is an introductory class to design theory and practice, with a focus on human-centered design."
+extended-description: In this course facilitated by Berkeley Innovation, students learn about the human-centered design process and theory, and engage in hands-on activities during class and in homework assignments. Throughout the semester, students will use industry standard tools to solve a problem they care about in their midterm and final project.
 
 about-bi: We are UC Berkeley’s first student-run design organization since 2003.
 about-bi-long: We are UC Berkeley’s first student-run design organization since 2003. As a human-centered design consultancy, we work with clients on projects ranging from physical to digital products, brands, and experiences.
 bi-url: https://berkeleyinnovation.org
-app-url: /construction
-app-deadline: January 12, 2023
+
+app-url: https://forms.gle/McG7HF5P2f8BVBfj9
+app-deadline: January 19, 2023
 
 plugins:
   - jekyll-notion
@@ -65,3 +67,6 @@ notion:
       sorts: [{ "property": "Date", "direction": "descending" }]
   pages:
     - id: 4469aa32c57247cd94e8994f04ef694f # Syllabus
+
+gems:
+  - jekyll-liquify
