@@ -12,7 +12,7 @@ about-bi-long: We are UC Berkeley’s first student-run design organization sinc
 bi-url: https://berkeleyinnovation.org
 
 app-url: https://forms.gle/McG7HF5P2f8BVBfj9
-app-deadline: January 19, 2023
+app-deadline: January 24, 2023
 
 plugins:
   - jekyll-notion
