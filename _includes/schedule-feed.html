@@ -3,15 +3,21 @@
     <div {% if week.current_week == 'true' %}id="current-week"{% endif %} class="border {% if week.current_week == 'true' %}border-inv-yellow{% endif %} rounded-4 mb-4">
         <div class="p-4">
             <div>
-                <span class="badge rounded-3 border border-2 border-dark text-dark">Week #{{ week.week_number }}</span>
-                {% if week.current_week == 'true' %}
-                    <span class="badge rounded-3 border border-2 border-inv-yellow bg-inv-yellow text-bg-inv-yellow">Current Week</span>
+                {% if week.no_class == 'false' %}
+                    <span class="badge rounded-3 border border-2 border-dark text-dark">Week #{{ week.week_number }}</span>
+                    {% if week.current_week == 'true' %}
+                        <span class="badge rounded-3 border border-2 border-inv-yellow bg-inv-yellow text-bg-inv-yellow">Current Week</span>
+                    {% endif %}
+                {% else %}
+                    <span class="badge rounded-3 border border-2 border-inv-red bg-inv-red text-light">No Class</span>
                 {% endif %}
             </div>
             <h6 class="card-subtitle fw-semibold text-muted mt-2 mb-1">{{ week.meeting_date | date: "%B %e, %Y" }}</h6>
             <h3 class="fw-semibold mt-0 mb-1 {% if week.current_week == 'true' %}swag-text{% endif %}">{{ week.title }}</h3>
-            <a href="{{ week.recording }}" class="btn btn-link {% if week.recording == nil %}disabled{% endif %} p-0">Recording</a>
-            <a href="{ week.slides }}" class="btn btn-link {% if week.slides == nil %}disabled{% endif %} p-0">Slides</a>
+            {% if week.no_class == 'false' %}
+                <a href="{{ week.recording }}" class="btn btn-link {% if week.recording == nil %}disabled{% endif %} p-0">Recording</a>
+                <a href="{ week.slides }}" class="btn btn-link {% if week.slides == nil %}disabled{% endif %} p-0">Slides</a>
+            {% endif %}
 
             {% if week.hw_title != nil or week.project_title != nil or week.other_title != nil %}
             <div class="mt-3">

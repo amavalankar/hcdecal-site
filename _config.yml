@@ -56,7 +56,7 @@ notion:
       collection: assignments
     - id: 7bb8b112533649039a6ce4588a83cfa2
       data: schedule
-      sorts: [{ "property": "Week Number", "direction": "ascending" }]
+      sorts: [{ "property": "Meeting Date", "direction": "ascending" }]
     - id: 5cf9ab87b30e4851b92e422673fa6bd2
       data: staff
       sorts: [{ "property": "Role", "direction": "ascending" }]
