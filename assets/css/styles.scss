@@ -97,12 +97,13 @@ $theme-colors:              map-merge($theme-colors, $custom-colors);
     background: $swagient;
     background-size: 150% auto;
 
-    animation: shift-text 10s ease-in-out infinite;
+    animation: shift-text 8s ease-in-out infinite;
     @keyframes shift-text { 
-        0%{background-position:50% 50%}
-        30%{background-position:0% 100%}
-        60%{background-position:100% 0%}
-        100%{background-position:50% 50%}
+        0%{background-position:0% 0%}
+        25%{background-position:70% 30%}
+        50%{background-position:100% 100%}
+        75%{background-position:30% 70%}
+        100%{background-position:0% 0%}
     }
 }
 
