@@ -59,7 +59,7 @@ notion:
       sorts: [{ "property": "Meeting Date", "direction": "ascending" }]
     - id: 5cf9ab87b30e4851b92e422673fa6bd2
       data: staff
-      sorts: [{ "property": "Role", "direction": "ascending" }]
+      sorts: [{ "property": "Role", "direction": "descending" }]
     - id: ed8263c9b84a41b489e8023febf85dd1
       data: faqs
     - id: 80d0187af1a74f27b13aec16e7674f23
