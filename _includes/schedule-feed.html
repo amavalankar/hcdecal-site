@@ -15,8 +15,8 @@
             <h6 class="card-subtitle fw-semibold text-muted mt-2 mb-1">{{ week.meeting_date | date: "%B %e, %Y" }}</h6>
             <h3 class="fw-semibold mt-0 mb-1 {% if week.current_week == 'true' %}swag-text{% endif %}">{{ week.title }}</h3>
             {% if week.no_class == 'false' %}
-                <a href="{{ week.recording }}" class="btn btn-link {% if week.recording == nil %}disabled{% endif %} p-0">Recording</a>
-                <a href="{ week.slides }}" class="btn btn-link {% if week.slides == nil %}disabled{% endif %} p-0">Slides</a>
+                <!-- <a href="{{ week.recording }}" class="btn btn-link {% if week.recording == nil %}disabled{% endif %} p-0">Recording</a> -->
+                <a href="{{ week.slides }}" class="btn btn-link {% if week.slides == nil %}disabled{% endif %} p-0">Slides</a>
             {% endif %}
 
             {% if week.hw_title != nil or week.project_title != nil or week.other_title != nil %}
