@@ -9,4 +9,14 @@
     - name: Attendance
       url: https://docs.google.com/forms/d/e/1FAIpQLSdpDC0EeORDr8K894Ozn7M636CypLcsnDhomr1r6y2uIRFzLg/viewform
     - name: bCourses
-      url: /construction
+      url: https://bcourses.berkeley.edu/courses/1524116
+- section-title: Quick Links
+  links:
+    - name: Class Playlist
+      url: https://tinyurl.com/hcdbopping
+    - name: Discord
+      url: https://discord.gg/aCGmEfkHXH
+    - name: Absence Form
+      url: https://tinyurl.com/sp23-absence
+    - name: Anonymous Feedback
+      url: https://tinyurl.com/sp23-feedback
