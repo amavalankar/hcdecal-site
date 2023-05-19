@@ -109,8 +109,8 @@ $position-values:           map-merge($position-values, $added-positions);
   
 .page-container-bordered {
     @extend .page-container;
-    @extend .border-almost-blk; 
     @extend .border-top;
+    @extend .border-almost-blk; 
 }
 
 .swag-btn {
