@@ -1,0 +1,117 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: big-head
+title: the human-centered design decal
+buttons:
+    - {text: schedule, url: /schedule}
+    - {text: syllabus, url: /syllabus}
+    - {text: apply now, url: /app, full: true}
+---
+<!-- Details section -->
+<section class="container-fluid bg-whitey">
+    <div class="row">
+        <div class="col-12 col-sm-5 border-almost-blk border-top border-sm-right d-flex justify-content-center align-items-center">
+            <ul class="list-group list-group-flush border-0 bg-whitey text-end fs-4 fw-bold p-4">
+                <li class="list-group-item border-0 bg-whitey p-0">2 units</li>
+                <li class="list-group-item border-0 bg-whitey p-0">p/np</li>
+                <li class="list-group-item border-0 bg-whitey p-0">jacobs 310</li>
+                <li class="list-group-item border-0 bg-whitey p-0">7-9 pm pst</li>
+                <li class="list-group-item border-0 bg-whitey text-bluey p-0"><u>apps due 9/8</u></li>
+            </ul>
+        </div>
+        <div class="col-12 col-sm-7 border-almost-blk border-top p-5">
+            <h3 class="mb-2 fw-bold lh-1">Our Human-Centered Design DeCal is an <span class="text-pinky">introductory class to design theory and practice</span>, with a focus on human-centered design.</h3>
+            <p class="fs-5 lh-sm my-3">In this course facilitated by <a class="text-decoration-underline text-almost-blk" href="https://google.com">Berkeley Innovation</a>, students learn about the human-centered design process and theory and engage in hands-on activities during class and in homework assignments. Throughout the semester, students will use industry standard tools to solve a problem they care about in their midterm and final project. Apps due September 8, 2023.</p>
+            <button class="swag-btn btn-lg btn-mello">apply now</button>
+        </div>
+    </div>
+</section>
+
+<!-- Text scroller -->
+<section class="text-bg-teal border-almost-blk border-top py-3 overflow-hidden">
+    <div class="wrapper">
+        <div class="marquee">
+            <p class="fs-3 fw-bold m-0">
+                Design for Humans • Design for Humans • Design for Humans • Design for Humans • Design for Humans • Design for Humans • Design for Humans • Design for Humans • Design for Humans • 
+            </p>
+            <p class="fs-3 fw-bold m-0">
+                Design for Humans • Design for Humans • Design for Humans • Design for Humans • Design for Humans • Design for Humans • Design for Humans • Design for Humans • Design for Humans • 
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- What the course covers -->
+<section class="page-container-bordered bg-almost-blk bg-text-dark">
+    <p class="fs-1 text-whitey fw-bold pb-3">what the course covers</p>
+
+    <div class="row text-whitey">
+        <div class="col-6 col-md-3 mb-3">
+            <img class="img-fluid rounded-4 mb-3" src="/assets/img/graphic-research.png" alt="..." />
+            <h3>research</h3>
+            <p>research methods, design process, and need-finding.</p>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+            <img class="img-fluid rounded-4 mb-3" src="/assets/img/graphic-synthesis.png" alt="..." />
+            <h3>synthesis</h3>
+            <p>research methods, design process, and need-finding.</p>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+            <img class="img-fluid rounded-4 mb-3" src="/assets/img/graphic-ideation.png" alt="..." />
+            <h3>ideation</h3>
+            <p>research methods, design process, and need-finding.</p>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+            <img class="img-fluid rounded-4 mb-3" src="/assets/img/graphic-visual-design.png" alt="..." />
+            <h3>visual design</h3>
+            <p>research methods, design process, and need-finding.</p>
+        </div>
+    </div>
+</section>
+
+{% include faq-section.html %}
+
+<!-- Course staff section -->
+<section class="page-container-bordered bg-whitey">
+    <p class="fs-1 bg-text-dark fw-bold mb-5">humans behind the decal</p>
+
+    <div class="row gx-5 px-4 px-md-5">
+        {% for person in site.data.staff %}
+        <div class="col-6 col-sm-4 col-md-3 px-sm-4 mb-4">
+            <div class="position-relative mb-4">
+                {% if person.role == 'TA' %}
+                <span class="swag-badge position-absolute top-0 start-0 translate-middle text-bg-pinky px-3 fs-6">
+                    {{ person.role }}
+                </span>
+                {% else %}
+                <span class="swag-badge position-absolute top-0 start-10 translate-middle text-bg-burple px-3 fs-6">
+                    {{ person.role }}
+                </span>
+                {% endif %}
+                
+
+                <span class="swag-badge position-absolute top-100 start-90 translate-middle text-bg-teal px-3 fs-6">
+                    {{ person.pronouns }}
+                </span>
+
+                <img src="assets/img/blank.png" class="img-fluid border border-almost-blk" alt="...">
+            </div>
+            
+            <h2>{{ person.title }}</h2>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- About BI -->
+<section class="page-container bg-whitey pt-1 pb-5">
+    <div class="p-4 p-sm-5 bg-mello border-almost-blk border text-almost-blk">
+        <p class="fs-1 fw-bold pb-2">about berkeley innovation</p>
+        <p class="fs-4 pb-2">We are UC Berkeley’s first student-run design organization since 2003. As a human-centered design consultancy, we work with clients on projects ranging from physical to digital products, brands, and experiences.</p>
+        <button class="swag-btn btn-lg btn-mello">learn more</button>
+    </div>
+</section>

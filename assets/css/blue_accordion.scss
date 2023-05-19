@@ -1,0 +1,30 @@
+@import "../../node_modules/bootstrap/scss/variables";
+
+$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='#{$whitey}' class='bi bi-plus-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z'/></svg>");
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='#{$whitey}' class='bi bi-plus-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z'/></svg>");
+$accordion-icon-transform:      rotate(45deg);
+$accordion-icon-transition:     transform .2s ease-in-out;
+$accordion-button-padding-x:    2rem;
+$accordion-body-padding-x:      2rem;
+
+[data-bs-theme="bluey"] {
+    .accordion {
+      --#{$prefix}accordion-bg: #{$bluey};
+      --#{$prefix}accordion-button-active-bg: #{$bluey};
+      --#{$prefix}accordion-color: #{$whitey};
+      --#{$prefix}accordion-border-color: #{$whitey};
+      --#{$prefix}accordion-button-active-bg: #{$bluey};
+      --#{$prefix}accordion-button-active-color: #{$whitey};
+      --#{$prefix}accordion-btn-color: #{$whitey};
+      --#{$prefix}accordion-active-bg: #{$bluey};
+      --#{$prefix}accordion-active-color: #{$whitey};
+      --#{$prefix}accordion-btn-icon-color: #{$whitey};
+      --#{$prefix}accordion-btn-padding-x: #{$accordion-button-padding-x};
+      --#{$prefix}accordion-body-padding-x: #{$accordion-body-padding-x};
+      --#{$prefix}-link-color: #{$pinky};
+    }
+}
+
+#faqs a {
+    @extend .link-teal;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  {% include navbar.html %}
+
+  {% include blue-header.html %}
+
+  <!-- Text scroller -->
+  <section class="text-bg-mello border-almost-blk border-top py-3 fixed-bottom overflow-hidden">
+    <div class="wrapper">
+        <div class="marquee">
+            <p class="fs-3 fw-bold m-0">
+              {{ page.scroller }}
+            </p>
+            <p class="fs-3 fw-bold m-0">
+              {{ page.scroller }}
+            </p>
+        </div>
+    </div>
+  </section>
+
+</html>

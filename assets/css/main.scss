@@ -1,0 +1,155 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+$bluey:                 #308FFF;
+$bluey-light:           #ABD2FF;
+$bluey-dark:            #155AAB;
+
+$teal:                  #42F19D;
+$teal-light:            #A0FFD2;
+$teal-dark:             #306A4E;
+
+$almost-blk:            #0D0D0F;
+$whitey:                #FAFAFA;
+
+$pinky:                 #FF378B;
+$pinky-light:           #FFDBEA;
+
+$mello:                 #FFDA15;
+$mello-light:           #FFF4BB;
+
+$grae:                  #84888B;
+$grae-light:            #EEEEEE;
+
+$burple:                #864EFF;
+$burple-light:          #CAB1FF;
+
+$custom-colors: (
+    "bluey":            $bluey,
+    "bluey-light":      $bluey-light,
+    "bluey-dark":       $bluey-dark,
+    "teal":             $teal,
+    "teal-light":       $teal-light,
+    "teal-dark":        $teal-dark,
+    "almost-blk":       $almost-blk,
+    "whitey":           $whitey,
+    "pinky":            $pinky,
+    "pinky-light":      $pinky-light,
+    "mello":            $mello,
+    "mello-light":      $mello-light,
+    "grae":             $grae,
+    "grae-light":       $grae-light,
+    "burple":           $burple,
+    "burple-light":     $burple-light,
+);
+
+$added-positions: (
+    10:     10%,
+    25:     25%,
+    75:     75%,
+    90:     90%,
+);
+
+$primary:                   $bluey;
+$font-family-sans-serif:    "Helvetica Neue", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$border-width:              3.5px;
+$btn-border-radius:         0rem;
+$border-radius:             0.1rem;
+$border-radius-lg:          0.1rem;
+$border-radius-sm:          0.1rem;
+$font-weight-bold:          700;
+$display-font-weight:       $font-weight-bold;
+
+$line-height-base:            1.25;
+$line-height-sm:              1.1;
+$line-height-lg:              1.5;
+
+// @import "responsive_borders.scss";
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../node_modules/bootstrap/scss/functions";
+
+@import "blue_accordion.scss";
+
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "../../node_modules/bootstrap/scss/variables";
+
+// 4. Include any default map overrides here
+$theme-colors:              map-merge($theme-colors, $custom-colors);
+$position-values:           map-merge($position-values, $added-positions);
+
+// 5. Include remainder of required parts
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/helpers";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../../node_modules/bootstrap/scss/utilities/api";
+
+@import "marquee.scss";
+@import "docs.scss";
+
+// 8. Add additional code here
+.page-container {
+    @extend .container-fluid;
+    @extend .p-4;
+    @extend .p-md-5;
+  }
+  
+.page-container-bordered {
+    @extend .page-container;
+    @extend .border-almost-blk; 
+    @extend .border-top;
+}
+
+.swag-btn {
+    @extend .btn;
+    @extend .border;
+    @extend .border-almost-blk;
+    @extend .fw-bold;
+}
+
+.swag-badge {
+    @extend .badge;
+    @extend .rounded-pill;
+    @extend .border;
+    @extend .border-almost-blk;
+    @extend .me-1;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+  
+      .border#{$infix}-top {      border-top: $border-width solid !important; }
+      .border#{$infix}-right {    border-right: $border-width solid !important; }
+      .border#{$infix}-bottom {   border-bottom: $border-width solid !important; }
+      .border#{$infix}-left {     border-left: $border-width solid !important; }
+  
+      .border#{$infix}-top-0 {    border-top: 0 !important; }
+      .border#{$infix}-right-0 {  border-right: 0 !important; }
+      .border#{$infix}-bottom-0 { border-bottom: 0 !important; }
+      .border#{$infix}-left-0 {   border-left: 0 !important; }
+  
+      .border#{$infix}-x {
+        border-left: $border-width solid !important;
+        border-right: $border-width solid !important;
+      }
+  
+      .border#{$infix}-y {
+        border-top: $border-width solid !important;
+        border-bottom: $border-width solid !important;
+      }
+    }
+  }

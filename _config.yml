@@ -1,0 +1,82 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Your awesome title
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+sass:
+  sass_dir: _scss
+
+plugins:
+  - jekyll-notion
+  - jekyll-toc
+
+permalink: pretty
+
+toc:
+  min_level: 2
+  max_level: 3
+    
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      toc: true
+  -
+    scope:
+      path: ""
+      type: assignments
+    values:
+      layout: docs
+      toc: true
+
+collections:
+  assignments:
+    output: true
+
+notion:
+  databases:
+    - id: a9302c741dd448ad8614e86cedc669a1
+      collection: assignments
+    - id: 8536d13bf5f74d8888c1c4225c8195b3
+      data: schedule
+      sorts: [{ "property": "Meeting Date", "direction": "ascending" }]
+    - id: 33d0b357ae8d4b5ca52dcb9aff9788e4
+      data: staff
+      sorts: [{ "property": "Role", "direction": "descending" }]
+    - id: 125fce8c01a4401cb2f681c9e2960a3a
+      data: faqs
+  pages:
+    - id: 318f1e777fa843278e5ea362fcd610a0 # Syllabus
+
+gems:
+  - jekyll-liquify

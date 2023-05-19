@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-md navbar-light bg-whitey fixed-top align-items-center border-almost-blk border-bottom">
+    <div class="container-fluid py-1 py-md-2 align-items-center mx-4">
+        <a class="navbar-brand fw-bold p-0 text-burple" href="/">
+            hcd
+        </a>
+
+      <button class="navbar-toggler border-0 swag-text-nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main">
+        <i class="bi bi-list h1 text-dark"></i>
+      </button>
+
+      <div class="navbar-collapse collapse my-1" id="navbar-main">
+        <hr class="d-md-none border-0">
+        <ul class="navbar-nav ms-auto d-md-flex align-items-md-center">
+            {% for item in site.data.navigation %}
+                <li class="nav-item nav-pills me-1">
+                    {% capture lower-link %}{{ page.url | downcase}}{% endcapture %}
+
+                    {% if (item.url != "/construction") and lower-link contains item.url and ((item.url != "/") or (lower-link == "/")) %}
+                        <a class="nav-link active text-bg-burple border border-almost-blk px-3 fw-semibold shadow-sm" href="{{ item.url }}">
+                    {% else %}
+                        <a class="nav-link text-almost-blk px-3 fw-semibold" href="{{ item.url }}">
+                    {% endif %}
+                    {{ item.title }} 
+                    {% if item.icon %}
+                    <i class="bi bi-{{ item.icon }}"></i>
+                    {% endif %}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+      </div>
+    </div>
+</nav>

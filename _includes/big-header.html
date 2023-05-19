@@ -1,0 +1,20 @@
+<!-- Main big header -->
+<section class="vh-100 d-flex bg-whitey align-items-center">
+    <div class="container p-3 p-sm-4">
+        <h1 class="display-1 py-3 lh-1">
+            {% if page.hero-text != nil %}
+                {{ page.hero-text }}
+            {% else %}
+                {{ page.title }}
+            {% endif %}
+        </h1>
+
+        <div class="">
+            {% for button in page.buttons %}
+                <a class="swag-btn {% if button.full %} btn-almost-blk {% else %} btn-outline {% endif %} mb-2 me-2" href="{{ button.url }}">
+                    {{ button.text }}
+                </a>
+            {% endfor %}
+        </div> 
+    </div>
+</section>

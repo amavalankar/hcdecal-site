@@ -1,0 +1,23 @@
+<!-- FAQ section -->
+<section class="page-container-bordered bg-bluey bg-text-dark">
+    <p class="fs-1 text-whitey fw-bold pb-3">humans often ask</p>
+
+    <div class="pb-4" data-bs-theme="bluey">
+        <div class="accordion" id="faqs">
+            {% for faq in site.data.faqs %}
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="head-faq{{ faq.content | size }}">
+                <button class="accordion-button collapsed fs-4 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq{{ faq.content | size }}" aria-expanded="false" aria-controls="collapseOne">
+                    {{ faq.title }}
+                </button>
+                </h2>
+                <div id="faq{{ faq.content | size }}" class="accordion-collapse collapse" aria-labelledby="head-faq{{ faq.content | size }}" data-bs-parent="#faqs">
+                    <div class="accordion-body">
+                        {{ faq.content | markdownify }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

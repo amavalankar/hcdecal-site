@@ -1,0 +1,72 @@
+---
+layout: default
+title: Schedule
+scroller: Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • 
+buttons:
+    - {text: jump to current week, url: '#current-week'}
+---
+
+<!-- Text scroller -->
+<section class="text-bg-mello border-almost-blk border-top border-bottom py-3 overflow-hidden">
+    <div class="wrapper">
+        <div class="marquee">
+            <p class="fs-3 fw-bold m-0">
+              {{ page.scroller }}
+            </p>
+            <p class="fs-3 fw-bold m-0">
+              {{ page.scroller }}
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Course schedule section -->
+<section class="page-container bg-whitey">
+
+    {% for week in site.data.schedule %}
+    <div class="border-almost-blk border mb-4" {% if week.current_week == 'true' %}id="current-week"{% endif %}>
+        <div class="px-3 py-2 d-flex align-items-center {% if week.no_class == 'false' %} bg-grae-light {% else %} bg-pinky-light {% endif %}">
+            {% if week.no_class == 'false' %} 
+            <span class="swag-badge text-bg-burple px-3 fs-6">
+                Week #{{ week.week_number }}
+            </span>
+            
+            {% if week.current_week == 'true' %}
+            <span class="swag-badge text-bg-burple px-3 fs-6">
+                Current Week
+            </span>
+            {% endif %}           
+            
+            {% else %} 
+            <span class="swag-badge text-bg-pinky px-3 fs-6">
+                No Class
+            </span>
+            {% endif %}
+            
+        </div>
+        <hr class="opacity-100 my-0">
+        <div class="p-3">
+            <h4 class="text-grae mb-0 mt-2">{{ week.meeting_date | date: "%B %e, %Y" }}</h4>
+            <h2 class="fw-bold">{{ week.title }}</h2>
+
+            {% if week.no_class == 'false' %}
+            <div>
+                <a href="{{ week.slides }}" class="swag-btn btn-mello mb-2 me-2 {% if week.slides == nil %}disabled{% endif %}"><i class="bi bi-window-stack"></i> Slides</a>
+
+                {% if week.hw_title != nil %}
+                    <a class="swag-btn btn-teal mb-2 me-2 {% if week.hw_link == nil %}disabled{% endif %}" href="{{ week.hw_link }}"><i class="bi bi-journal-bookmark"></i> {{ week.hw_title }}</a>
+                {% endif %}
+                
+                {% if week.project_title != nil %}
+                    <a class="swag-btn btn-teal mb-2 me-2 {% if week.project_link == nil %}disabled{% endif %}" href="{{ week.project_link }}"><i class="bi bi-file-earmark-check-fill"></i> {{ week.project_title }}</a>
+                {% endif %}
+
+                {% if week.other_title != nil %}
+                    <a class="swag-btn btn-teal mb-2 me-2 {% if week.other_link == nil %}disabled{% endif %}" href="{{ week.other_link }}"><i class="bi bi-bookmarks"></i> {{ week.other_title }}</a>
+                {% endif %}  
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</section>

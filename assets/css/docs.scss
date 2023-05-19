@@ -1,0 +1,130 @@
+div.toc-items ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.toc-items {
+    ul {
+        padding-left: 0;
+        margin-bottom: 0;
+        margin-left: -.75rem;
+        list-style: none;
+  
+        ul {
+          padding-left: 1rem;
+          margin-left: -1rem;
+  
+          a {
+            padding-left: 1.375rem;
+          }
+        }
+    }
+  
+    a {
+        display: block;
+        padding: .125rem 0 .125rem .5rem;
+        color: inherit;
+        text-decoration: none;
+        // border-left: .125rem solid transparent;
+
+        &:hover {
+            color: $primary;
+            border-left-color: $pinky;
+            font-weight: $font-weight-semibold
+        }
+
+        &.active {
+            color: $pinky;
+            border-left-color: $pinky;
+            font-weight: $font-weight-semibold
+        }
+
+        code {
+            font: inherit;
+        }
+    }
+}
+
+.page-content {
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0.25rem;
+        margin-bottom: .5rem;
+        @extend .fw-bold;
+        line-height: 1.2;
+    }
+
+    hr {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+
+        @extend .opacity-100;
+        @extend .text-almost-blk;
+    }
+
+    .alert {
+        margin-bottom: 1.5em;
+    }
+
+    table {
+        @extend .table;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;    
+        display: block;
+    }
+
+    tbody {
+        @extend .table-group-divider;
+        border-top-color: $black;
+        border-top-width: 0.25rem !important;
+    }
+
+    p.btn a {
+        @extend .text-light;
+        @extend .text-decoration-none;
+      }
+
+    .article-btn {
+        @extend .swag-btn;
+        @extend .btn-mello;
+    }
+    
+    p.article-btn a {
+        @extend .text-almost-blk;
+    }
+
+    blockquote {
+        @extend .bg-mello;
+        @extend .p-3;
+        @extend .border;
+        @extend .border-dark;
+    }
+    
+    blockquote p {
+        @extend .m-0;
+    }
+}
+
+// blockquote {
+//     @extend .bd-callout;
+// }
+
+.vh-50 {
+    height: 50vh;
+}
+
+.vh-75 {
+    height: 75vh;
+}
+
+li p {
+    margin-bottom: 0.25rem !important;
+}
+
+.sticky-section {
+    position: sticky;
+    top: 100px;
+}
+
+body {
+    cursor: url(/assets/cursor.svg), auto;
+}
