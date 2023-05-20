@@ -54,13 +54,23 @@ defaults:
     values:
       layout: docs
       toc: true
+  -
+    scope:
+      path: ""
+      type: individual-pages
+    values:
+      toc: true
 
 collections:
   assignments:
     output: true
+  individual-pages:
+    output: true
 
 notion:
   databases:
+    - id: 8c0db6bfccfb4c519a46d0ec1d6d4688
+      collection: individual-pages
     - id: a9302c741dd448ad8614e86cedc669a1
       collection: assignments
     - id: 8536d13bf5f74d8888c1c4225c8195b3
@@ -71,8 +81,9 @@ notion:
       sorts: [{ "property": "Role", "direction": "descending" }]
     - id: 125fce8c01a4401cb2f681c9e2960a3a
       data: faqs
-  pages:
-    - id: 318f1e777fa843278e5ea362fcd610a0 # Syllabus
+
+  # pages:
+  #   - id: 318f1e777fa843278e5ea362fcd610a0 # Syllabus
 
 gems:
   - jekyll-liquify
