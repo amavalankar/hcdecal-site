@@ -51,6 +51,14 @@ $added-positions: (
     90:     90%,
 );
 
+body {
+  cursor: url(/assets/cursor.svg), auto;
+}
+
+#apply-button {
+  cursor: url(/assets/arrow-up-right-circle-fill.svg), auto;
+}
+
 $primary:                   $bluey;
 $font-family-sans-serif:    "Helvetica Neue", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $border-width:              3px;

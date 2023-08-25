@@ -16,9 +16,9 @@
                     {% capture lower-link %}{{ page.url | downcase}}{% endcapture %}
 
                     {% if (item.url != "/construction") and lower-link contains item.url and ((item.url != "/") or (lower-link == "/")) %}
-                        <a class="nav-link active text-bg-burple border border-almost-blk px-3 fw-semibold shadow-sm" href="{{ item.url }}">
+                        <a class="nav-link active text-bg-burple border border-almost-blk px-3 fw-semibold shadow-sm" href="{{ item.url }}" id="{{ item.id }}">
                     {% else %}
-                        <a class="nav-link text-almost-blk px-3 fw-semibold" href="{{ item.url }}">
+                        <a class="nav-link text-almost-blk px-3 fw-semibold" href="{{ item.url }}" id="{{ item.id }}">
                     {% endif %}
                     {{ item.title }} 
                     {% if item.icon %}

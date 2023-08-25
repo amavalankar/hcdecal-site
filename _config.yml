@@ -18,7 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Human-Centered Design DeCal
+title: the human-centered design decal
+tagline: hcd decal
 email: caldesigndecal@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   The course website for Berkeley Innovation's Human-Centered Design DeCal—a student taught course at UC Berkeley.
@@ -82,8 +83,6 @@ notion:
     - id: 125fce8c01a4401cb2f681c9e2960a3a
       data: faqs
 
-  # pages:
-  #   - id: 318f1e777fa843278e5ea362fcd610a0 # Syllabus
-
+app-url: "https://docs.google.com/forms/d/e/1FAIpQLSecMsEe9FXMsgRQqCbyXNCMF5ds-dY57TAK38_315NLfXuZWw/viewform"
 gems:
   - jekyll-liquify
