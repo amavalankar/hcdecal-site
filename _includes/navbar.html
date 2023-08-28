@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-whitey fixed-top align-items-center border-almost-blk border-bottom">
     <div class="container-fluid py-1 py-md-2 align-items-center mx-4">
         <a class="navbar-brand fw-bold p-0 text-burple" href="/">
-            hcd
+            hcd decal
         </a>
 
       <button class="navbar-toggler border-0 swag-text-nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main">
@@ -16,9 +16,9 @@
                     {% capture lower-link %}{{ page.url | downcase}}{% endcapture %}
 
                     {% if (item.url != "/construction") and lower-link contains item.url and ((item.url != "/") or (lower-link == "/")) %}
-                        <a class="nav-link active text-bg-burple border border-almost-blk px-3 fw-semibold shadow-sm" href="{{ item.url }}" id="{{ item.id }}">
+                        <a class="nav-link active text-bg-burple border border-almost-blk px-3 py-2 fw-semibold shadow-sm" href="{{ item.url }}" id="{{ item.id }}">
                     {% else %}
-                        <a class="nav-link text-almost-blk px-3 fw-semibold" href="{{ item.url }}" id="{{ item.id }}">
+                        <a class="nav-link text-almost-blk p-3 fw-semibold" href="{{ item.url }}" id="{{ item.id }}">
                     {% endif %}
                     {{ item.title }} 
                     {% if item.icon %}
