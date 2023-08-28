@@ -24,7 +24,7 @@ buttons:
 <section class="page-container bg-whitey">
 
     {% for week in site.data.schedule %}
-    <div class="border-almost-blk border mb-4" {% if week.current_week == 'true' %}id="current-week"{% endif %}>
+    <div class="border-almost-blk border rounded mb-4" {% if week.current_week == 'true' %}id="current-week"{% endif %}>
         <div class="px-3 py-2 d-flex align-items-center {% if week.no_class == 'false' %} bg-grae-light {% else %} bg-pinky-light {% endif %}">
             {% if week.no_class == 'false' %} 
             <span class="swag-badge text-bg-burple px-3 fs-6">
