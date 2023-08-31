@@ -23,6 +23,12 @@
     <meta property="og:title" content="the human-centered design decal &middot; " />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="" /> -->
+
+    {% if page.title == "Home" %}
+      <meta property="og:title" content="{{ site.title }}" />
+    {% else %}
+      <meta property="og:title" content="{{ page.title }} &middot; {{ site.tagline }}" />
+    {% endif %}
   
     <!-- RSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
