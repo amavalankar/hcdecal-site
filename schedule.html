@@ -25,7 +25,7 @@ buttons:
 
     {% for week in site.data.schedule %}
     <div class="border-almost-blk border rounded mb-4" {% if week.current_week == 'true' %}id="current-week"{% endif %}>
-        <div class="px-3 py-2 d-flex align-items-center {% if week.no_class == 'false' %} bg-grae-light {% else %} bg-pinky-light {% endif %}">
+        <div class="px-3 py-2 d-flex align-items-center {% if week.no_class == 'false' %} {% if week.current_week == 'true' %} bg-burple-light {% else %} bg-grae-light {%endif %}{% else %} bg-pinky-light {% endif %}">
             {% if week.no_class == 'false' %} 
             <span class="swag-badge text-bg-burple px-3 fs-6">
                 Week #{{ week.week_number }}
@@ -51,7 +51,9 @@ buttons:
 
             {% if week.no_class == 'false' %}
             <div>
-                <a href="{{ week.slides }}" class="swag-btn btn-mello mb-2 me-2 {% if week.slides == nil %}disabled{% endif %}"><i class="bi bi-window-stack"></i> Slides</a>
+                {% if week.slides != nil %}
+                    <a class="swag-btn btn-mello mb-2 me-2 {% if week.hw_link == nil %}disabled{% endif %}" href="{{ week.slides }}"><i class="bi bi-window-stack"></i> {{ week.hw_title }}</a>
+                {% endif %}
 
                 {% if week.hw_title != nil %}
                     <a class="swag-btn btn-teal mb-2 me-2 {% if week.hw_link == nil %}disabled{% endif %}" href="{{ week.hw_link }}"><i class="bi bi-journal-bookmark"></i> {{ week.hw_title }}</a>

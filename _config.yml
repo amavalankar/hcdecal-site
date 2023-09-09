@@ -61,11 +61,19 @@ defaults:
       type: individual-pages
     values:
       toc: true
+  -
+    scope:
+      path: ""
+      type: redirect
+    values:
+      layout: "redirect"
 
 collections:
   assignments:
     output: true
   individual-pages:
+    output: true
+  redirect:
     output: true
 
 notion:
@@ -82,6 +90,10 @@ notion:
       sorts: [{ "property": "Role", "direction": "descending" }]
     - id: 125fce8c01a4401cb2f681c9e2960a3a
       data: faqs
+    # - id: 8a5ac927680f45f29a384634fb99ea5f
+    - id: 8a5ac927680f45f29a384634fb99ea5f
+      collection: redirect
+    
 
 app-url: "https://docs.google.com/forms/d/e/1FAIpQLSecMsEe9FXMsgRQqCbyXNCMF5ds-dY57TAK38_315NLfXuZWw/viewform"
 gems:

@@ -2,7 +2,6 @@
   url: /schedule
 - title: Syllabus
   url: /syllabus
-- title: Apply
-  url: /app
+- title: Attendance
+  url: /attendance
   icon: arrow-up-right-square
-  id: apply-button

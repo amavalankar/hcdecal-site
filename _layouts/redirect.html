@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv='refresh' content='0; URL={{ site.app-url }}'>
+    {% if page.active == 'true' %}
+      <meta http-equiv='refresh' content='0; URL={{ page.destination }}'>
+    {% else %}
+      <meta http-equiv='refresh' content='0; URL=/'>
+    {% endif %}
   </head>
 </html>
