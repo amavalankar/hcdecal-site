@@ -25,7 +25,6 @@ div.toc-items ul {
         padding: .125rem 0 .125rem .5rem;
         color: inherit;
         text-decoration: none;
-        // border-left: .125rem solid transparent;
 
         &:hover {
             color: $primary;
@@ -78,18 +77,14 @@ div.toc-items ul {
         border-top-width: 0.25rem !important;
     }
 
+    .article-btn {
+        @extend .swag-btn;
+        @extend .btn-bluey;
+    }
+
     p.btn a {
         @extend .text-light;
         @extend .text-decoration-none;
-      }
-
-    .article-btn {
-        @extend .swag-btn;
-        @extend .btn-mello;
-    }
-    
-    p.article-btn a {
-        @extend .text-almost-blk;
     }
 
     blockquote {

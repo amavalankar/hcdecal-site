@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% if page.active == 'true' %}
+    {% if page.active %}
       <meta http-equiv='refresh' content='0; URL={{ page.destination }}'>
     {% else %}
       <meta http-equiv='refresh' content='0; URL=/'>
