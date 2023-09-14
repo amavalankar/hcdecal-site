@@ -1,0 +1,48 @@
+---
+layout: default
+title: Rebuild Website?
+scroller: Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • 
+---
+
+<section class="page-container bg-whitey">
+    <a class="swag-btn btn-lg btn-mello" id="rebuild-btn">Rebuild Website</a>
+</section>
+
+<script>
+    // Function to send a POST request using the fetch API
+    function sendPostRequest() {
+        const url = 'https://api.netlify.com/build_hooks/63bf3b255dbf954909ca3e20';
+
+        // Send the POST request
+        fetch(url, {
+            method: 'POST',
+            body: JSON.stringify({}), // Empty JSON object as the request payload
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log('POST request successful');
+                window.location.replace('/success');
+            } else {
+                console.error('POST request failed');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+
+    // Get a reference to the anchor element by its ID
+    var rebuildBtn = document.getElementById("rebuild-btn");
+
+    // Add a click event listener to the anchor element
+    rebuildBtn.addEventListener("click", function (event) {
+        // Prevent the default behavior of the anchor (i.e., navigating to a new page)
+        event.preventDefault();
+
+        // Call the function to send the POST request
+        sendPostRequest();
+    });
+</script>
