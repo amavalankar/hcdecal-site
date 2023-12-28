@@ -20,7 +20,7 @@
 
 title: the human-centered design decal
 tagline: hcd decal
-email: caldesigndecal@gmail.com
+email: staff@hcd-decal.org
 description: >- # this means to ignore newlines until "baseurl:"
   The course website for Berkeley Innovation's Human-Centered Design DeCal—a student taught course at UC Berkeley.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -78,20 +78,19 @@ collections:
 
 notion:
   databases:
-    - id: 8c0db6bfccfb4c519a46d0ec1d6d4688
+    - id: db789909f475462c9c9c8ec4f3449d49
       collection: individual-pages
-    - id: a9302c741dd448ad8614e86cedc669a1
+    - id: 6f706551c9db4858bf46e794adeb1a37
       collection: assignments
-    - id: 8536d13bf5f74d8888c1c4225c8195b3
+    - id: fec35ea7866042bab55fa15426a28631
       data: schedule
       sorts: [{ "property": "Meeting Date", "direction": "ascending" }]
-    - id: 33d0b357ae8d4b5ca52dcb9aff9788e4
+    - id: ab83dddc32324397b051ad48cd343d84
       data: staff
       sorts: [{ "property": "Role", "direction": "descending" }]
-    - id: 125fce8c01a4401cb2f681c9e2960a3a
+    - id: 24c3579cae474a1da23147530e2a21a5
       data: faqs
-    # - id: 8a5ac927680f45f29a384634fb99ea5f
-    - id: 8a5ac927680f45f29a384634fb99ea5f
+    - id: 652389ecf59e43979c4ee950c4420f46
       collection: redirect
     
 
