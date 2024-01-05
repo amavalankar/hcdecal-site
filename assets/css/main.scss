@@ -73,8 +73,8 @@ $btn-border-radius:         $radius;
 $border-radius:             $radius;
 $border-radius-lg:          $radius;
 $border-radius-sm:          $radius;
-$font-weight-bold:          600;
-$display-font-weight:       $font-weight-bold;
+$font-weight-bold:          500;
+$display-font-weight:       500;
 
 $line-height-base:            1.25;
 $line-height-sm:              1.1;
@@ -117,10 +117,10 @@ $position-values:           map-merge($position-values, $added-positions);
 
 // 8. Add additional code here
 .page-container {
-    @extend .container-fluid;
-    @extend .p-4;
-    @extend .p-md-5;
-  }
+  @extend .container-fluid;
+  @extend .p-4;
+  @extend .p-md-5;
+}
   
 .page-container-bordered {
     @extend .page-container;

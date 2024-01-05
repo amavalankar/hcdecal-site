@@ -45,19 +45,17 @@ div.toc-items ul {
 }
 
 .page-content {
-    h1, h2, h3, h4, h5, h6 {
-        margin-top: 0.25rem;
-        margin-bottom: .5rem;
-        @extend .fw-bold;
-        line-height: 1.2;
+
+    p strong {
+        font-weight: 600;
     }
 
     hr {
         margin-top: 1.5em;
         margin-bottom: 1.5em;
 
-        @extend .opacity-100;
-        @extend .text-almost-blk;
+        @extend .opacity-25;
+        @extend .text-secondary;
     }
 
     .alert {
@@ -65,6 +63,7 @@ div.toc-items ul {
     }
 
     table {
+        @extend .container-fluid;
         @extend .table;
         overflow-x: auto !important;
         -webkit-overflow-scrolling: touch;    
@@ -88,7 +87,8 @@ div.toc-items ul {
     }
 
     blockquote {
-        @extend .bg-mello;
+        @extend .bg-bluey;
+        @extend .text-light;
         @extend .p-3;
         @extend .border;
         @extend .border-dark;
@@ -99,10 +99,6 @@ div.toc-items ul {
     }
 }
 
-// blockquote {
-//     @extend .bd-callout;
-// }
-
 .vh-50 {
     height: 50vh;
 }
@@ -112,7 +108,7 @@ div.toc-items ul {
 }
 
 li p {
-    margin-bottom: 0.25rem !important;
+    margin-bottom: 0.2rem !important;
 }
 
 .sticky-section {
