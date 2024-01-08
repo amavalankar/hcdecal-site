@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Schedule
-scroller: Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • 
+scroller: Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • Schedule • 
 buttons:
     - {text: jump to current week, url: '#current-week'}
 ---
@@ -27,26 +27,32 @@ buttons:
     <div class="border-almost-blk border rounded mb-4" {% if week.current_week == 'true' %}id="current-week"{% endif %}>
         <div class="px-3 py-2 d-flex align-items-center {% if week.no_class == 'false' %} {% if week.current_week == 'true' %} bg-burple-light {% else %} bg-grae-light {%endif %}{% else %} bg-pinky-light {% endif %}">
             {% if week.no_class == 'false' %} 
-            <span class="swag-badge text-bg-burple px-3 fs-6">
-                Week #{{ week.week_number }}
+            <span class="fs-6 my-1 me-2">
+                <kbd class="text-bg-burple border border-almost-blk px-2">
+                    Week #{{ week.week_number }}
+                </kbd>
             </span>
             
             {% if week.current_week == 'true' %}
-            <span class="swag-badge text-bg-burple px-3 fs-6">
-                Current Week
+            <span class="fs-6 my-1 me-2">
+                <kbd class="text-bg-burple border border-almost-blk px-2">
+                    Current Week
+                </kbd>
             </span>
             {% endif %}           
             
             {% else %} 
-            <span class="swag-badge text-bg-pinky px-3 fs-6">
-                No Class
+            <span class="fs-6 my-1 me-2">
+                <kbd class="text-bg-pinky border border-almost-blk px-2">
+                    No Class
+                </kbd>
             </span>
             {% endif %}
             
         </div>
         <hr class="opacity-100 my-0">
         <div class="p-3">
-            <h4 class="text-grae mb-0 mt-2">{{ week.meeting_date | date: "%B %e, %Y" }}</h4>
+            <h5 class="text-grae mb-0 mt-2">{{ week.meeting_date | date: "%B %e, %Y" }}</h4>
             <h2 class="fw-bold">{{ week.title }}</h2>
 
             {% if week.no_class == 'false' %}

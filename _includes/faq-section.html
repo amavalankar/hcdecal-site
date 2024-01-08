@@ -1,8 +1,8 @@
 <!-- FAQ section -->
 <section class="page-container-bordered bg-bluey bg-text-dark">
-    <p class="fs-1 text-whitey fw-bold pb-3">humans often ask</p>
+    <p class="fs-1 text-whitey fw-bold pb-2">humans often ask</p>
 
-    <div class="pb-4" data-bs-theme="bluey">
+    <div data-bs-theme="bluey">
         <div class="accordion" id="faqs">
             {% for faq in site.data.faqs %}
             <div class="accordion-item">
@@ -19,5 +19,8 @@
             </div>
             {% endfor %}
         </div>
+
+        <h4 class="text-light mt-4">have another question we haven't answered?</h4>
+        <a class="swag-btn btn-light" href="mailto:staff@hcd-decal.org"><i class="bi bi-envelope-fill"></i> email us</a>
     </div>
 </section>

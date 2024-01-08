@@ -37,10 +37,10 @@ buttons:
     <div class="wrapper">
         <div class="marquee">
             <p class="fs-3 fw-bold m-0">
-                Design for People • Design for People • Design for People • Design for People • Design for People • Design for People • Design for People • Design for People • Design for People • 
+                Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> 
             </p>
             <p class="fs-3 fw-bold m-0">
-                Design for People • Design for People • Design for People • Design for People • Design for People • Design for People • Design for People • Design for People • Design for People • 
+                Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> Design for People <i class="bi bi-person-arms-up"></i> 
             </p>
         </div>
     </div>
@@ -55,21 +55,25 @@ buttons:
     <div class="row text-whitey">
         <div class="col-6 col-md-3 mb-3">
             <img class="img-fluid rounded-4 mb-3" src="/assets/img/graphic-research.png" alt="..." />
+            <i class="bi bi-magic fs-3 text-pinky"></i> 
             <h3>research</h3>
             <p>research methods, design process, and need-finding</p>
         </div>
         <div class="col-6 col-md-3 mb-3">
             <img class="img-fluid rounded-4 mb-3" src="/assets/img/graphic-synthesis.png" alt="..." />
+            <i class="bi bi-puzzle fs-3 text-mello"></i> 
             <h3>synthesis</h3>
             <p>creating insights, finding pain-points, and visualizing data</p>
         </div>
         <div class="col-6 col-md-3 mb-3">
             <img class="img-fluid rounded-4 mb-3" src="/assets/img/graphic-ideation.png" alt="..." />
+            <i class="bi bi-rocket-takeoff fs-3 text-teal"></i> 
             <h3>ideation</h3>
             <p>insight-based ideation, convergent- and divergent-thinking</p>
         </div>
         <div class="col-6 col-md-3 mb-3">
             <img class="img-fluid rounded-4 mb-3" src="/assets/img/graphic-visual-design.png" alt="..." />
+            <i class="bi bi-layout-wtf fs-2 text-bluey"></i> 
             <h3>visual design</h3>
             <p>design theory, making aesthetic designs, presentation skills</p>
         </div>
@@ -87,18 +91,17 @@ buttons:
         <div class="col-6 col-sm-4 col-md-3 px-sm-4 mb-4">
             <div class="position-relative mb-4">
                 {% if person.role == 'TA' %}
-                <span class="swag-badge position-absolute top-0 start-0 translate-middle text-bg-pinky px-3 fs-6">
-                    {{ person.role }}
+                <span class="position-absolute top-0 start-10 translate-middle px-3 fs-6 rounded-pill">
+                    <kbd class="text-bg-pinky border border-almost-blk">{{ person.role }}</kbd>
                 </span>
                 {% else %}
-                <span class="swag-badge position-absolute top-0 start-10 translate-middle text-bg-burple px-3 fs-6">
-                    {{ person.role }}
+                <span class="position-absolute top-0 start-10 translate-middle px-3 fs-6 rounded-pill">
+                    <kbd class="text-bg-burple border border-almost-blk">{{ person.role }}</kbd>
                 </span>
                 {% endif %}
                 
-
-                <span class="swag-badge position-absolute top-100 start-90 translate-middle text-bg-teal px-3 fs-6">
-                    {{ person.pronouns }}
+                <span class="position-absolute top-100 start-90 translate-middle px-3 fs-6 rounded-pill">
+                    <kbd class="text-bg-teal border border-almost-blk">{{ person.pronouns }}</kbd>
                 </span>
 
                 <img src="{{ person.image }}" class="img-fluid border border-almost-blk rounded" alt="...">
