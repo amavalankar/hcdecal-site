@@ -1,6 +1,10 @@
 <!-- Main big header -->
-<section class="vh-100 d-flex bg-bluey text-whitey align-items-center">
+<section class="vh-100 d-flex text-bg-{{ page.color | default: 'bluey' }} align-items-center">
     <div class="container p-3 p-sm-4">
+        {% if page.icon != nil %}
+        <h1><i class="display-3 bi bi-{{ page.icon}}"></i></h1>
+        {% endif %}
+
         <h1 class="display-1 py-3 lh-1">
             {% if page.hero-text != nil %}
                 {{ page.hero-text }}
@@ -9,12 +13,15 @@
             {% endif %}
         </h1>
 
-        <div class="">
+        
+        <div>
             {% for button in page.buttons %}
                 <a class="swag-btn {% if button.full %} btn-almost-blk {% else %} btn-outline {% endif %} mb-2 me-2" href="{{ button.url }}">
                     {{ button.text }}
                 </a>
             {% endfor %}
         </div> 
+        {{ content }}
     </div>
+    
 </section>

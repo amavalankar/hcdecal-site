@@ -1,16 +1,23 @@
 ---
-layout: default
-title: Rebuild Website?
+layout: single-head
+title: Rebuild Website
+color: burple
+icon: stars
+hero-text: Rebuild Website?
 scroller: Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • Rebuild • 
 ---
 
-<section class="page-container bg-whitey">
-    <a class="swag-btn btn-lg btn-mello" id="rebuild-btn">Rebuild Website</a>
-</section>
+<button class="swag-btn btn-lg btn-mello" id="rebuild-btn">Rebuild Website</button>
+<a class="swag-btn btn-lg btn-almost-blk" href="/">Return Home</a>
 
 <script>
     // Function to send a POST request using the fetch API
     function sendPostRequest() {
+        rebuildBtn.setAttribute('disabled', '')
+        rebuildBtn.innerHTML = 
+            `Rebuild Website <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+            <span class="visually-hidden" role="status">Loading...</span>`;
+
         const url = 'https://api.netlify.com/build_hooks/658d24ae87f231847da513f9';
 
         // Send the POST request
