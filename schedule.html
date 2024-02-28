@@ -61,6 +61,10 @@ buttons:
                     <a class="swag-btn btn-mello mb-2 me-2" href="{{ week.slides }}"><i class="bi bi-card-text"></i> Slides</a>
                 {% endif %}
 
+                {% if week.other_title != nil %}
+                    <a class="swag-btn btn-pinky mb-2 me-2 {% if week.other_link == nil %}disabled{% endif %}" href="{{ week.other_link }}"><i class="bi bi-circle-square"></i> {{ week.other_title }}</a>
+                {% endif %}  
+
                 {% if week.hw_title != nil %}
                     <a class="swag-btn btn-teal mb-2 me-2 {% if week.hw_link == nil %}disabled{% endif %}" href="{{ week.hw_link }}"><i class="bi bi-journal-bookmark"></i> {{ week.hw_title }}</a>
                 {% endif %}
@@ -68,10 +72,6 @@ buttons:
                 {% if week.project_title != nil %}
                     <a class="swag-btn btn-teal mb-2 me-2 {% if week.project_link == nil %}disabled{% endif %}" href="{{ week.project_link }}"><i class="bi bi-box-fill"></i> {{ week.project_title }}</a>
                 {% endif %}
-
-                {% if week.other_title != nil %}
-                    <a class="swag-btn btn-pinky mb-2 me-2 {% if week.other_link == nil %}disabled{% endif %}" href="{{ week.other_link }}"><i class="bi bi-circle-square"></i> {{ week.other_title }}</a>
-                {% endif %}  
             </div>
             {% endif %}
         </div>
