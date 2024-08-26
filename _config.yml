@@ -78,19 +78,19 @@ collections:
 
 notion:
   databases:
-    - id: 3896ad6a06864b7eb7474929272148ba
+    - id: 12e745629fd943f19ff6b7e0b5a20a38
       collection: individual-pages
-    - id: 6f706551c9db4858bf46e794adeb1a37
+    - id: feaa92a6b43a469882c6ecd4967f51c1
       collection: assignments
-    - id: 0a073988327b455ca02e849dca582eec
+    - id: 5f97559004bc401b97966b47618adda6
       data: schedule
       sorts: [{ "property": "Meeting Date", "direction": "ascending" }]
-    - id: 7d2d9a790e4d477ca58d546545e8e9f0
+    - id: f9406deaaf784baebaba84dde71a675e
       data: staff
       sorts: [{ "property": "Role", "direction": "descending" }]
-    - id: 27e57ee8486146e3b0f07a624f5b9789
+    - id: adfdb69509ea4be1a34d995f111d5f50
       data: faqs
-    - id: 3896ad6a06864b7eb7474929272148ba
+    - id: fc3c60cf69fc4f3e88b7b7a481426b0f
       collection: redirect
     
 
