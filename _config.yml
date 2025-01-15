@@ -78,22 +78,21 @@ collections:
 
 notion:
   databases:
-    - id: 12e745629fd943f19ff6b7e0b5a20a38
+    - id: 1510d4840de9815aaa09f1112b761990
       collection: individual-pages
-    - id: feaa92a6b43a469882c6ecd4967f51c1
+    - id: 1510d4840de98176a9a6f8ffd0016a12
       collection: assignments
-    - id: 5f97559004bc401b97966b47618adda6
+    - id: 1510d4840de98125892ae42ba8ac4c7b
       data: schedule
       sorts: [{ "property": "Meeting Date", "direction": "ascending" }]
-    - id: f9406deaaf784baebaba84dde71a675e
+    - id: 1510d4840de981ceabd7d425be51eb7b
       data: staff
       sorts: [{ "property": "Role", "direction": "descending" }]
-    - id: adfdb69509ea4be1a34d995f111d5f50
+    - id: 1510d4840de98110b262c1769f91b308
       data: faqs
-    - id: fc3c60cf69fc4f3e88b7b7a481426b0f
+    - id: 1510d4840de9812a8c9ec7612687ef83
       collection: redirect
     
 
-app-url: "https://docs.google.com/forms/d/e/1FAIpQLSecMsEe9FXMsgRQqCbyXNCMF5ds-dY57TAK38_315NLfXuZWw/viewform"
 gems:
   - jekyll-liquify
